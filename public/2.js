@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{5:function(e,n,t){"use strict";t.r(n),t.d(n,"default",function(){return r});var l=t(0),a=t.n(l);function r(e){return a.a.createElement("div",null,a.a.createElement("h1",null,"Welcome"),a.a.createElement("p",null,"Welcome to my first Inertia.js app!"),a.a.createElement("p",null,e.foo))}}}]);
