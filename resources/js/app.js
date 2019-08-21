@@ -1,8 +1,6 @@
-import React, { Suspense, lazy } from "react";
-import { render } from "react-dom";
-import { InertiaApp, InertiaLink as Link } from "@inertiajs/inertia-react";
-
-const app = document.getElementById("app");
+import React, { Suspense } from 'react'
+import ReactDOM from 'react-dom'
+import { InertiaApp, InertiaLink as Link } from '@inertiajs/inertia-react'
 
 function App(props) {
   return (
@@ -17,14 +15,13 @@ function App(props) {
         <Suspense fallback={<span>Loading...</span>}>
           <InertiaApp
             initialPage={JSON.parse(app.dataset.page)}
-            resolveComponent={name =>
-              lazy(() => import(`./pages/${name}`))
-            }
+            resolveComponent={name => React.lazy(() => import(`./pages/${name}`))}
           />
         </Suspense>
       </article>
-    </main>
-  );
-}
 
-render(<App />, app);
+    </main>
+  )
+};
+
+ReactDOM.render(<App />, document.getElementById('app'));
